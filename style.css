@@ -1,0 +1,1323 @@
+/* ==========================================
+   SANJANA PHOTO STUDIO
+   Traditional Maharashtrian Wedding Theme
+   Complete Responsive CSS
+========================================== */
+
+/* GOOGLE FONTS
+   Add these links in HTML head:
+   Cormorant Garamond
+   DM Sans
+   Tiro Devanagari Marathi
+========================================== */
+
+:root {
+    --wine: #3b0710;
+    --wine2: #57101d;
+    --wine3: #711d2a;
+
+    --gold: #d8b77d;
+    --gold2: #f0d8a8;
+
+    --cream: #f8f1e8;
+    --cream2: #eee4d7;
+
+    --ink: #2c1718;
+    --muted: #bfaeaa;
+
+    --green: #20c968;
+}
+
+/* ==========================================
+   GLOBAL SETTINGS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ==========================================
+   ANNOUNCEMENT BAR
+========================================== */
+
+.announcement {
+    height: 30px;
+    background: #27050b;
+    color: var(--gold2);
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding: 8px;
+}
+
+.announcement span {
+    padding: 0 12px;
+}
+
+/* ==========================================
+   HEADER / NAVBAR
+========================================== */
+
+.site-header {
+    height: 78px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(250, 245, 238, 0.96);
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    border-bottom: 1px solid #e9ddd0;
+    box-shadow: 0 4px 25px #2b09100b;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--wine);
+}
+
+.brand-symbol {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #b68b4d;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    font: italic 29px 'Cormorant Garamond', serif;
+}
+
+.brand-name {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.brand-name small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 4px;
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    font-size: 11px;
+    color: #59484a;
+}
+
+.nav-links a {
+    transition: color .3s ease;
+}
+
+.nav-links a:hover {
+    color: #a77a3c;
+}
+
+.nav-wa,
+.nav-inquiry {
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+.nav-wa {
+    background: var(--green);
+    color: white;
+}
+
+.nav-inquiry {
+    background: #811a29;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--wine);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+    min-height: 690px;
+    height: calc(100svh - 108px);
+    max-height: 850px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: #fff8ee;
+    background: var(--wine);
+}
+
+.hero-bg,
+.hero-overlay,
+.statement-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-bg {
+    background:
+        url('YOUR_MAHARASHTRIAN_WEDDING_IMAGE.jpg') center 35% / cover no-repeat;
+
+    animation: heroZoom 16s ease-in-out infinite alternate;
+}
+
+.hero-overlay {
+    background: linear-gradient(90deg,
+            rgba(43, 4, 12, .92),
+            rgba(52, 5, 15, .72) 45%,
+            rgba(44, 5, 12, .13));
+}
+
+.hero-content {
+    position: relative;
+    margin-left: 10%;
+    max-width: 760px;
+    padding: 70px 0;
+}
+
+.eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.8px;
+    font-weight: 700;
+    color: #a17b48;
+}
+
+.gold-text {
+    color: var(--gold2);
+}
+
+.marathi {
+    font-family: 'Tiro Devanagari Marathi', serif;
+    color: var(--gold2);
+    font-size: 19px;
+}
+
+.hero h1 {
+    font: 500 clamp(56px, 7.1vw, 100px)/.9 'Cormorant Garamond', serif;
+
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.hero h1 em {
+    font-weight: 400;
+    color: #e2bd85;
+}
+
+.hero-desc {
+    max-width: 470px;
+    color: #e6d9d2;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 27px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.btn {
+    border: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 16px 24px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: transform .25s, box-shadow .25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px #16030735;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #321018;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+    right: 5%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #e4d3c7;
+}
+
+.hero-stamp {
+    position: absolute;
+    right: 7%;
+    bottom: 15%;
+
+    width: 112px;
+    height: 112px;
+
+    border: 1px solid #e5c58d88;
+    border-radius: 50%;
+
+    display: grid;
+    place-content: center;
+
+    text-align: center;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #f1d9aa;
+}
+
+/* ==========================================
+   STORY SECTION
+========================================== */
+
+.section {
+    padding: 115px 9%;
+}
+
+.story {
+    display: grid;
+    grid-template-columns: .55fr 1.4fr .95fr;
+
+    align-items: center;
+    gap: 42px;
+}
+
+.story-mark {
+    align-self: start;
+    padding-top: 15px;
+
+    color: #9c794a;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.story-copy h2,
+.section-title h2,
+.archive h2 {
+    font: 500 clamp(40px, 4.3vw, 59px)/1.02 'Cormorant Garamond', serif;
+
+    color: var(--wine);
+    margin: 18px 0;
+}
+
+.story-copy>p:not(.eyebrow) {
+    font-size: 12px;
+    line-height: 2;
+    color: #786b65;
+}
+
+.story-image {
+    overflow: hidden;
+}
+
+.story-image img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+/* ==========================================
+   SERVICES SECTION
+========================================== */
+
+.services {
+    background: #eee4d7;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-title p {
+    color: #786b65;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* SERVICE CARDS */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.service-card {
+    background: #faf6ef;
+    overflow: hidden;
+    min-width: 0;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 35px #3b07101c;
+}
+
+/* IMPORTANT IMAGE ALIGNMENT */
+
+.service-card img {
+    width: 100%;
+    height: 270px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center 20%;
+
+    transition: transform .6s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Individual photo alignment */
+
+.wedding-photo {
+    object-position: center 18%;
+}
+
+.prewedding-photo {
+    object-position: center 15%;
+}
+
+.haldi-photo {
+    object-position: center 20%;
+}
+
+.portrait-photo {
+    object-position: center 15%;
+}
+
+.service-card>div {
+    padding: 20px 18px 24px;
+}
+
+.service-card span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #a17b48;
+}
+
+.service-card h3 {
+    font: 600 25px 'Cormorant Garamond', serif;
+    color: var(--wine);
+    margin: 10px 0;
+}
+
+.service-card p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: #796b60;
+}
+
+/* ==========================================
+   WEDDING STATEMENT SECTION
+========================================== */
+
+.statement {
+    min-height: 490px;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+    color: white;
+
+    overflow: hidden;
+}
+
+.statement-bg {
+    background:
+        linear-gradient(rgba(57, 7, 17, .78),
+            rgba(57, 7, 17, .82)),
+        url('YOUR_WEDDING_CEREMONY_IMAGE.jpg') center / cover no-repeat;
+}
+
+.statement-content {
+    position: relative;
+    padding: 70px 20px;
+}
+
+.statement h2 {
+    font: 500 clamp(38px, 5vw, 64px)/1.05 'Cormorant Garamond', serif;
+
+    margin: 25px 0;
+}
+
+.statement h2 em {
+    color: var(--gold2);
+}
+
+/* ==========================================
+   MAHARASHTRIAN WEDDING GALLERY
+========================================== */
+
+.archive {
+    padding: 100px 5%;
+    background: #f1e7d9;
+}
+
+/* GALLERY HEADING */
+
+.archive-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.archive-heading .eyebrow {
+    letter-spacing: 3px;
+    color: #a17b48;
+}
+
+.archive-heading h2 {
+    font: 500 clamp(38px, 5vw, 60px)/1.05 'Cormorant Garamond', serif;
+
+    color: var(--wine);
+    margin: 15px 0;
+}
+
+.archive-heading p {
+    font-size: 12px;
+    color: #786b65;
+    line-height: 1.8;
+}
+
+/* UNIFORM GALLERY GRID */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+/* EACH GALLERY IMAGE */
+
+.gallery-grid figure {
+    position: relative;
+
+    width: 100%;
+    height: 380px;
+
+    margin: 0;
+    overflow: hidden;
+
+    border-radius: 4px;
+    background: #e4d5c3;
+}
+
+/* GALLERY PHOTO ALIGNMENT */
+
+.gallery-grid img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 20%;
+
+    transition: transform .7s ease;
+}
+
+.gallery-grid figure:hover img {
+    transform: scale(1.05);
+}
+
+/* INDIVIDUAL GALLERY IMAGE POSITIONS */
+
+.gallery-wedding {
+    object-position: center 15%;
+}
+
+.gallery-bride {
+    object-position: center 12%;
+}
+
+.gallery-groom {
+    object-position: center 15%;
+}
+
+.gallery-haldi {
+    object-position: center 20%;
+}
+
+.gallery-mehendi {
+    object-position: center 18%;
+}
+
+.gallery-couple {
+    object-position: center 15%;
+}
+
+/* GALLERY IMAGE CAPTION */
+
+.gallery-grid figcaption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 35px 18px 18px;
+
+    color: white;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    background: linear-gradient(transparent,
+            rgba(40, 5, 13, .82));
+}
+
+/* ==========================================
+   INQUIRY SECTION
+========================================== */
+
+.inquiry {
+    background: var(--wine);
+    color: #fff1e7;
+
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 6%;
+
+    padding: 90px 9% 95px;
+}
+
+.online-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 8px 14px;
+
+    border: 1px solid #d2b27b5c;
+    border-radius: 30px;
+
+    color: #46e68b;
+    font-size: 10px;
+    font-weight: 700;
+
+    margin-bottom: 27px;
+}
+
+.inquiry h2 {
+    font: 500 clamp(51px, 5.6vw, 78px)/.93 'Cormorant Garamond', serif;
+
+    margin: 22px 0 27px;
+}
+
+.inquiry-description {
+    color: #e6d9d2;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.inquiry-form {
+    background: #f8f1e8;
+    color: #35181a;
+
+    padding: 34px 35px;
+
+    box-shadow: 0 20px 60px #1b020755;
+}
+
+.inquiry-form h3 {
+    font: 600 34px 'Cormorant Garamond', serif;
+    color: var(--wine);
+    margin: 8px 0;
+}
+
+/* ==========================================
+   MULTIPLE CEREMONY SELECTION
+========================================== */
+
+.ceremony-field {
+    border: 0;
+    padding: 0;
+    margin: 0 0 22px;
+}
+
+.ceremony-field legend {
+    font-size: 8px;
+    letter-spacing: 1.7px;
+    font-weight: 700;
+
+    color: #967044;
+    margin-bottom: 12px;
+}
+
+.ceremony-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.choice {
+    cursor: pointer;
+}
+
+.choice input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.choice span {
+    display: block;
+
+    padding: 10px 15px;
+
+    border: 1px solid #ddcec0;
+    border-radius: 30px;
+
+    color: #603d3b;
+    font-size: 10px;
+
+    transition: all .25s ease;
+}
+
+.choice input:checked+span {
+    background: var(--wine);
+    border-color: var(--wine);
+    color: #fff2dc;
+}
+
+.choice span:hover {
+    border-color: var(--gold);
+}
+
+/* ==========================================
+   INQUIRY FORM INPUTS
+========================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-grid label {
+    display: block;
+}
+
+.form-grid label span,
+.message-label span {
+    display: block;
+
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #795e55;
+    margin-bottom: 6px;
+}
+
+.form-grid input,
+.form-grid select,
+.message-label textarea {
+    width: 100%;
+
+    border: 1px solid #ddcfc2;
+    background: #f4eae0;
+
+    border-radius: 10px;
+    padding: 14px 13px;
+
+    font-size: 11px;
+    color: #381c1d;
+
+    outline: none;
+
+    transition:
+        border .2s,
+        box-shadow .2s;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.message-label textarea:focus {
+    border-color: #a77b48;
+    box-shadow: 0 0 0 3px #c69a5a20;
+}
+
+.message-label {
+    display: block;
+    margin-top: 17px;
+}
+
+.message-label textarea {
+    resize: vertical;
+    min-height: 95px;
+}
+
+/* ==========================================
+   WHATSAPP SUBMIT BUTTON
+========================================== */
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+
+    background: var(--green);
+    color: white;
+
+    border-radius: 40px;
+    padding: 18px;
+
+    border: none;
+
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow: 0 8px 22px #20c96836;
+
+    transition: all .3s ease;
+}
+
+.submit-btn:hover {
+    background: #16b75a;
+    transform: translateY(-3px);
+}
+
+.form-note {
+    display: block;
+    text-align: center;
+
+    font-size: 9px;
+    color: #927f6d;
+
+    margin-top: 12px;
+}
+
+/* ==========================================
+   FLOATING WHATSAPP BUTTON
+========================================== */
+
+.floating-wa {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 13px 18px;
+
+    background: var(--green);
+    color: #fff;
+
+    border-radius: 40px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 25px #0004;
+
+    transition: transform .25s ease;
+}
+
+.floating-wa:hover {
+    transform: translateY(-4px);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    background: #26060c;
+    color: #d7c4b5;
+
+    padding: 35px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer a {
+    color: var(--gold2);
+}
+
+.footer p {
+    font-size: 11px;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .section {
+        padding: 90px 6%;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card img {
+        height: 280px;
+    }
+
+    .story {
+        grid-template-columns: .4fr 1.3fr 1fr;
+        gap: 25px;
+    }
+
+    .inquiry {
+        gap: 4%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid figure {
+        height: 350px;
+    }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 720px) {
+
+    .site-header {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        background: #faf5ee;
+
+        padding: 14px 6% 22px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+
+        box-shadow: 0 12px 25px #0002;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px;
+    }
+
+    .hero {
+        height: calc(100svh - 100px);
+        min-height: 610px;
+    }
+
+    .hero-content {
+        margin: 0;
+        padding: 35px 7%;
+    }
+
+    .hero h1 {
+        font-size: clamp(54px, 13vw, 75px);
+    }
+
+    .hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .hero-stamp {
+        display: none;
+    }
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .story-image img {
+        height: 350px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .service-card img {
+        height: 220px;
+    }
+
+    .service-card h3 {
+        font-size: 21px;
+    }
+
+    .archive {
+        padding: 70px 6%;
+    }
+
+    .archive-heading {
+        margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-grid figure {
+        height: 270px;
+    }
+
+    .inquiry {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 72px 6%;
+    }
+
+    .inquiry h2 {
+        font-size: 62px;
+    }
+
+    .inquiry-form {
+        padding: 27px 20px;
+    }
+
+    .footer {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .floating-wa {
+        right: 13px;
+        bottom: 13px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+
+    .brand-name {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .brand-symbol {
+        width: 35px;
+        height: 35px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card img {
+        height: 300px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid figure {
+        height: 350px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inquiry-form {
+        padding: 23px 16px;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+/* GOOGLE REVIEW - FULL WIDTH CENTER ALIGNMENT */
+
+.archive-review {
+    grid-column: 1 / -1 !important;
+
+    width: 100% !important;
+    min-height: 250px;
+
+    margin: 40px 0 0 !important;
+    padding: 55px 20px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-align: center !important;
+
+    gap: 14px;
+}
+
+.archive-review h3 {
+    width: 100%;
+    text-align: center !important;
+
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #3b0710;
+}
+
+.archive-review p {
+    width: 100%;
+    text-align: center !important;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #755b52;
+}
+
+.archive-review .review-btn {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 8px auto 0 !important;
+    padding: 16px 30px;
+
+    background: #d8b77d;
+    color: #3b0710;
+
+    border-radius: 35px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all .3s ease;
+}
+
+.archive-review .review-btn:hover {
+    background: #3b0710;
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .archive-review {
+        grid-column: 1 / -1 !important;
+        min-height: 210px;
+        padding: 40px 15px !important;
+    }
+
+    .archive-review h3 {
+        font-size: 20px;
+    }
+}
+
+
+.map-link {
+    display: inline-block;
+    color: #f0c878;
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #5b1728, #8b2942);
+    border: 1px solid #d8b77d;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.map-link strong {
+    color: #f5d99b;
+    letter-spacing: 0.5px;
+}
+
+.map-link:hover {
+    background: #d8b77d;
+    color: #4b1422;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(216, 183, 125, 0.3);
+}
+
+.map-link:hover strong {
+    color: #4b1422;
+}
+
+/* ==========================================
+   END OF SANJANA PHOTO STUDIO CSS
+========================================== */
